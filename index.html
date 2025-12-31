@@ -234,6 +234,10 @@
           <a class="btn" href="mechanic-quote.html">Request a Mechanic Quote</a>
           <a class="btn btn-secondary" href="contact.html">Contact Us</a>
         </div>
+
+        <p class="disclaimer" style="margin-top:12px;">
+          <strong>Mobile service costs more</strong> due to travel and on-site setup time. Shop/drop-off service is the most cost-effective option.
+        </p>
       </div>
 
       <div class="hero-right">
@@ -265,27 +269,33 @@
     <h2>Services</h2>
     <div class="grid-2">
       <div>
-        <h3 style="margin-bottom:6px;">Maintenance</h3>
+        <h3 style="margin-bottom:6px;">Maintenance & Basics</h3>
         <ul>
-          <li>Oil changes and fluid services</li>
-          <li>Brake inspection and replacement</li>
-          <li>Basic preventative maintenance</li>
-          <li>Pre-trip / pre-purchase inspections</li>
+          <li>General fluid services (oil, coolant, brake fluid, power steering, differential/transfer case as applicable)</li>
+          <li>Windshield washer fluid and basic top-offs</li>
+          <li>Wiper blade replacement</li>
+          <li>Battery jump-starts / no-start assistance</li>
         </ul>
       </div>
       <div>
         <h3 style="margin-bottom:6px;">Repair & Diagnostics</h3>
         <ul>
-          <li>No-start / battery / charging issues</li>
-          <li>Suspension and steering components</li>
-          <li>Wheel bearings / hubs</li>
-          <li>Noise / vibration diagnosis and repair planning</li>
+          <li>Brake work (inspection, pads/rotors/calipers as needed)</li>
+          <li>Suspension & steering work (tie rods, ball joints, control arms, sway links, shocks/struts)</li>
+          <li>Engine work (case-by-case: leaks, belts, sensors, tune-up items, basic repairs)</li>
+          <li>Diagnostics (warning lights, noises/vibrations, drivability issues, electrical basics)</li>
         </ul>
       </div>
     </div>
-    <p class="muted" style="margin-top:12px;">
-      Not seeing your issue listed? Submit the quote request and describe the problem — we’ll confirm what we can take on.
-    </p>
+  </div>
+
+  <div class="card">
+    <h2>Advanced Support When Needed</h2>
+    <div class="callout">
+      For complex diagnostics or higher-skill repairs, we have access to an experienced <strong>master-level mechanic</strong>
+      we can bring in as needed. If an issue requires deeper troubleshooting or specialized expertise, we’ll coordinate support
+      to get it diagnosed correctly and repaired the right way — with clear communication and approval before any additional work is performed.
+    </div>
   </div>
 
   <div class="card">
@@ -294,4 +304,27 @@
       <li><strong>Submit a request:</strong> Provide your contact info and vehicle details.</li>
       <li><strong>Quick review:</strong> We look over symptoms and ask follow-up questions if needed.</li>
       <li><strong>Quote + scheduling:</strong> You get clear options and next steps.</li>
-      <li><strong>Work begins after approval:</strong> No surprise add-ons without your go-ah
+      <li><strong>Work begins after approval:</strong> No surprise add-ons without your go-ahead.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="font-size:0.85rem; color:#555;">
+    <h3>Disclaimer</h3>
+    <p style="margin:0; line-height:1.55;">
+      Submitting a request does not create a service agreement or guarantee repair work. Pricing and scheduling depend on
+      inspection, parts availability, and workload. Diagnostic time may be billed depending on the issue and complexity.
+      We will not proceed with additional work beyond the approved scope without contacting you first.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; <span id="year"></span> Niblett's Garage LLC. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
