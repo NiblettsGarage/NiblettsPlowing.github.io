@@ -13,125 +13,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f3f6fb;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #002b5b;
-      color: #fff;
-      padding: 14px 15px 18px;
-      text-align: center;
-    }
-    img {
-      width: 100%;
-      max-width: 25rem;
-      height: auto;
-    }
-    .brandmark {
-      display: block;
-      margin: 0 auto;
-      max-width: 23rem;
-    }
-    nav {
-      background: #001932;
-      padding: 10px 15px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      display: inline-block;
-      padding: 6px 0;
-      opacity: 0.95;
-    }
-    nav a:hover {
-      text-decoration: underline;
-      opacity: 1;
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f3f6fb; margin:0; padding:0; }
+    header { background:#002b5b; color:#fff; padding:14px 15px 18px; text-align:center; }
+    img { width:100%; max-width:25rem; height:auto; }
+    .brandmark { display:block; margin:0 auto; max-width:23rem; }
+
+    nav { background:#001932; padding:10px 15px; text-align:center; }
+    nav a { color:#fff; text-decoration:none; margin:0 12px; font-size:0.95rem; font-weight:600; display:inline-block; padding:6px 0; opacity:0.95; }
+    nav a:hover { text-decoration:underline; opacity:1; }
+
+    .container { max-width:900px; margin:26px auto; padding:0 15px 34px; }
+    .card { background:#fff; border-radius:10px; padding:22px 22px 26px; box-shadow:0 6px 18px rgba(0,0,0,0.07); margin-bottom:20px; }
+    h1,h2,h3 { margin-top:0; }
+
+    .kicker { color:#2c3e50; font-weight:800; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; }
+    .muted { color:#4b5563; line-height:1.55; margin:0; }
+
+    .btn-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .btn { display:inline-block; padding:11px 18px; border-radius:6px; border:none; background:#0072ff; color:#fff; font-weight:800; font-size:0.95rem; cursor:pointer; text-decoration:none; }
+    .btn:hover { background:#0059c4; }
+    .btn-secondary { background:#e9eef9; color:#12305f; border:1px solid #d7def0; }
+    .btn-secondary:hover { background:#dde6fb; }
+
+    .grid-2 { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px; }
+    @media (max-width: 720px) { .grid-2 { grid-template-columns:1fr; } }
+
+    .info-line { display:flex; justify-content:space-between; gap:12px; padding:10px 10px; border-bottom:1px solid #e6ebf7; font-size:0.92rem; }
+    .info-line:last-child { border-bottom:none; padding-bottom:0; }
+    .info-key { color:#334155; font-weight:700; }
+    .info-val { color:#111827; font-weight:600; text-align:right; }
+
+    .callout {
+      background:#f7f9ff;
+      border:1px solid #e6ebf7;
+      border-radius:10px;
+      padding:14px 14px 16px;
+      color:#334155;
+      margin-top:16px;
+      font-size:0.92rem;
+      line-height:1.5;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 26px auto;
-      padding: 0 15px 34px;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 22px 22px 26px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-      margin-bottom: 20px;
-    }
-    h1, h2, h3 { margin-top: 0; }
-
-    .kicker {
-      color: #2c3e50;
-      font-weight: 800;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 6px;
-    }
-    .muted { color: #4b5563; line-height: 1.55; margin: 0; }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 11px 18px;
-      border-radius: 6px;
-      border: none;
-      background: #0072ff;
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn:hover { background: #0059c4; }
-    .btn-secondary {
-      background: #e9eef9;
-      color: #12305f;
-      border: 1px solid #d7def0;
-    }
-    .btn-secondary:hover { background: #dde6fb; }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-    @media (max-width: 720px) {
-      .grid-2 { grid-template-columns: 1fr; }
-    }
-
-    .info-line {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 10px 10px;
-      border-bottom: 1px solid #e6ebf7;
-      font-size: 0.92rem;
-    }
-    .info-line:last-child { border-bottom: none; padding-bottom: 0; }
-    .info-key { color: #334155; font-weight: 700; }
-    .info-val { color: #111827; font-weight: 600; text-align: right; }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #555;
-      padding: 15px;
-    }
+    footer { text-align:center; font-size:0.8rem; color:#555; padding:15px; }
   </style>
 </head>
 
@@ -144,7 +67,7 @@
 
 <nav>
   <a href="index.html">Mechanic Services</a>
-  <a href="mechanic.html">Mechanic Quote</a>
+  <a href="mechanic-quote.html">Mechanic Quote</a>
   <a href="plowing.html">Snow Plowing</a>
   <a href="quote.html">Plowing Quote</a>
   <a href="contact.html">Contact</a>
@@ -157,12 +80,21 @@
     <h1>Get in Touch</h1>
     <p class="muted">
       Serving the <strong>Chippewa Valley</strong>. For the fastest response, use the quote forms below.
-      For general questions, use phone/text or email.
+      For general questions, contact us by phone/text or email.
     </p>
 
     <div class="btn-row">
       <a class="btn" href="mechanic-quote.html">Mechanic Quote Form</a>
       <a class="btn btn-secondary" href="quote.html">Plowing Quote Form</a>
+    </div>
+
+    <div class="callout">
+      <strong>Mobile service costs more</strong> due to travel and on-site setup time. Shop/drop-off service is the most cost-effective option.
+    </div>
+
+    <div class="callout">
+      <strong>Advanced support when needed:</strong> For complex diagnostics or higher-skill repairs, we have access to an experienced
+      <strong>master-level mechanic</strong> we can bring in as needed. Any added scope or cost is confirmed before proceeding.
     </div>
   </div>
 
@@ -177,7 +109,7 @@
         </div>
         <div class="info-line">
           <span class="info-key">Phone / Text</span>
-          <span class="info-val">(715)390-0519</span>
+          <span class="info-val">(715) 290-0519</span>
         </div>
         <div class="info-line">
           <span class="info-key">Email</span>
@@ -191,14 +123,14 @@
 
       <div>
         <h3>What to Include</h3>
-        <ul style="padding-left:20px; margin:10px 0 0 0;">
+        <ul style="padding-left:20px; margin:10px 0 0 0; line-height:1.5;">
           <li>Year / make / model</li>
           <li>Symptoms (when it happens, any noises, warning lights)</li>
           <li>Timeline (ASAP, within a week, flexible)</li>
-          <li>For plowing: address, minimum amount of snow, salt/sidewalk options</li>
+          <li>For plowing: address, trigger depth, salt/sidewalk options</li>
         </ul>
         <p class="muted" style="margin-top:10px;">
-          If you have photos/videos, reach out to us via email.
+          If you have photos/videos, include them when you email — they help.
         </p>
       </div>
     </div>
