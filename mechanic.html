@@ -150,9 +150,10 @@
 
 <nav>
   <a href="index.html">Mechanic Services</a>
-  <a href="mechanic-quote.html">Mechanic Quote</a>
+  <a href="mechanic.html">Mechanic Quote</a>
   <a href="plowing.html">Snow Plowing</a>
   <a href="quote.html">Plowing Quote</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
@@ -225,26 +226,26 @@
       <div class="two-column">
         <div>
           <label for="year">Year <span class="required">*</span></label>
-          <input type="number" id="year" name="Vehicle year" required min="1900" max="2099" placeholder="2016">
+          <input type="number" id="year" name="Vehicle year" required min="1900" max="2099">
         </div>
         <div>
           <label for="make">Make <span class="required">*</span></label>
-          <input type="text" id="make" name="Vehicle make" required placeholder="Chevrolet">
+          <input type="text" id="make" name="Vehicle make" required>
         </div>
         <div>
           <label for="model">Model <span class="required">*</span></label>
-          <input type="text" id="model" name="Vehicle model" required placeholder="Silverado 1500">
+          <input type="text" id="model" name="Vehicle model" required>
         </div>
       </div>
 
       <div class="two-column">
         <div>
           <label for="trim">Trim / Engine (optional)</label>
-          <input type="text" id="trim" name="Trim / Engine" placeholder="High Country 6.2L / 5.3L / etc.">
+          <input type="text" id="trim" name="Trim / Engine">
         </div>
         <div>
           <label for="mileage">Mileage (optional)</label>
-          <input type="number" id="mileage" name="Mileage" min="0" placeholder="145000">
+          <input type="number" id="mileage" name="Mileage" min="0">
         </div>
       </div>
 
@@ -252,16 +253,7 @@
       <h3 style="margin-top:20px; margin-bottom:6px;">Service Requested</h3>
 
       <label for="service">What do you want done? <span class="required">*</span></label>
-      <select id="service" name="Service requested" required>
-        <option value="">-- Select --</option>
-        <option value="Brakes (pads/rotors/calipers)">Brakes (pads/rotors/calipers)</option>
-        <option value="Oil change / maintenance">Oil change / maintenance</option>
-        <option value="Suspension / steering">Suspension / steering</option>
-        <option value="Wheel bearing / hub">Wheel bearing / hub</option>
-        <option value="Battery / no-start / charging">Battery / no-start / charging</option>
-        <option value="Check engine light / diagnostics">Check engine light / diagnostics</option>
-        <option value="Other (describe below)">Other (describe below)</option>
-      </select>
+      <input type="text" id="service" name="Service requested">
 
       <label for="details">
         Describe the issue / symptoms <span class="required">*</span><br>
@@ -277,7 +269,8 @@
           <select id="location" name="Service location" required>
             <option value="">-- Select --</option>
             <option value="Bring vehicle to shop">Bring vehicle to shop</option>
-            <option value="Mobile service (if available)">Mobile service (if available)</option>
+            <option value="Bring vehicle to shop">Vehicle Pickup (Additional Fee)</option>
+            <option value="Mobile service (if available)">Mobile service (If Available)</option>
             <option value="Not sure / discuss options">Not sure / discuss options</option>
           </select>
         </div>
@@ -296,7 +289,7 @@
         Address / general area (optional)<br>
         <small class="description">If you’re requesting mobile service, include where the vehicle is located.</small>
       </label>
-      <input type="text" id="address" name="Vehicle location address" placeholder="Chippewa Falls / Eau Claire area">
+      <input type="text" id="address" name="Vehicle location address">
 
       <label style="margin-top:16px; font-size:0.85rem;">
         <input type="checkbox" required>
